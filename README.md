@@ -1,3 +1,4 @@
 # myLeetcodeAnswers
- Usage:
- ``` node masterRunner.js```
+## Usage
+ In the root of the repo run:
+ ```node masterRunner.js```
