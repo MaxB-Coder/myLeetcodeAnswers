@@ -1,4 +1,4 @@
-import { runArraysAndHashing } from './Arrays_and_Hashing/0.runner.js';
+import { runArraysAndHashing } from './Arrays_and_Hashing/0.runner.ts';
 
 runAll();
 
