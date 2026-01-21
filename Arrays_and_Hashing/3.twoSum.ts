@@ -29,5 +29,17 @@ Constraints:
 Only one valid answer exists. */
 
 export const twoSum = (nums: number[], target: number): number[] => {
-  return [0, 1];
+  const diffMap = new Map();
+
+  for (let i = 0; i < nums.length; i++) {
+    let diff: number = target - nums[i];
+
+    if (diffMap.has(diff)) {
+      return [diffMap.get(diff), i];
+    }
+
+    diffMap.set(nums[i], i);
+  }
+
+  throw new Error('No solution found!');
 };

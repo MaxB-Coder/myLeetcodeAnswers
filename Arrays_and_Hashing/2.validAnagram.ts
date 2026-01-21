@@ -17,12 +17,23 @@ Constraints:
 s and t consist of lowercase English letters. */
 
 export const validAnagram = (s: string, t: string): boolean => {
-  // Check if the strings are the same length, if not then return false
-  // Use a map
-  // Count the frequency of each letter
-  // Or
-  // Use an array with 26 0s
-  // Value of each letter with char codes, first word adds to correct character, second word takes away.
-  // If the final array is 26 0s then they are anagrams
-  return Boolean();
+  if (s.length !== t.length) {
+    return false;
+  }
+
+  const countArr = new Array<number>(26).fill(0);
+
+  for (let i = 0; i < s.length; i++) {
+    let sValue = s.charCodeAt(i) - 'a'.charCodeAt(0);
+    let tValue = t.charCodeAt(i) - 'a'.charCodeAt(0);
+
+    countArr[sValue]++;
+    countArr[tValue]--;
+  }
+
+  if (String(countArr) === String(Array<number>(26).fill(0))) {
+    return true;
+  } else {
+    return false;
+  }
 };

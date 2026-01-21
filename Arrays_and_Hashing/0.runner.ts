@@ -43,15 +43,15 @@ export function runArraysAndHashing() {
   passedOrFailed(
     1,
     JSON.stringify(groupAnagrams(data.strs1)) ===
-      JSON.stringify([['hat'], ['act', 'cat'], ['stop', 'pots', 'tops']])
+      JSON.stringify([['act', 'cat'], ['pots', 'tops', 'stop'], ['hat']])
   );
   passedOrFailed(
     1,
-    JSON.stringify(groupAnagrams(data.strs1)) === JSON.stringify([['x']])
+    JSON.stringify(groupAnagrams(data.strs2)) === JSON.stringify([['x']])
   );
   passedOrFailed(
     1,
-    JSON.stringify(groupAnagrams(data.strs1)) === JSON.stringify([['']])
+    JSON.stringify(groupAnagrams(data.strs3)) === JSON.stringify([['']])
   );
   endStamp();
 

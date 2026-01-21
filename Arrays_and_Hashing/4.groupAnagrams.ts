@@ -24,5 +24,18 @@ Constraints:
 strs[i] is made up of lowercase English letters. */
 
 export const groupAnagrams = (strs: string[]): string[][] => {
-  return Array.from([]);
+  const anaMap = new Map<string, Array<string>>();
+
+  for (const str of strs) {
+    let splitStr = str.split('');
+    let sortedStrArr = splitStr.sort();
+    let sortedStr = sortedStrArr.join('');
+
+    if (anaMap.has(sortedStr)) {
+      anaMap.get(sortedStr)!.push(str);
+    } else {
+      anaMap.set(sortedStr, [str]);
+    }
+  }
+  return Array.from(anaMap.values());
 };
